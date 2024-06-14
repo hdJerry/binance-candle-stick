@@ -6,26 +6,28 @@ import { RouterLink, RouterView } from 'vue-router'
   <header>
     <nav-bar />
   </header>
-
-  <RouterView />
+  <div class="wrapper">
+    <RouterView />
+  </div>
 </template>
 
-<style scoped>
-nav a.router-link-exact-active {
-  color: var(--color-text);
+<style lang="scss">
+nav {
+  a {
+    text-decoration: none;
+    color: var(--gray-100);
+    font: var(--text-sm);
+    transition: color 0.3s ease-in-out;
+    &.router-link-exact-active,
+    &:hover {
+      color: var(--vt-c-white);
+    }
+  }
 }
 
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
+.wrapper {
+  @media (min-width: 1028px) {
+    padding: 8px;
+  }
 }
 </style>

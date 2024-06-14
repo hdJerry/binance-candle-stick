@@ -1,15 +1,44 @@
 @import './base.css';
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+:root {
+  --text-xs: 500 10px/20px var(--satoshi-font);
+  --text-xs-1: 500 12px/20px var(--satoshi-font);
+  --text-xs-2: 500 12px/16px var(--satoshi-font);
+  --text-sm: 500 14px/16px var(--satoshi-font);
+  --text-sm-bold: 700 14px/16px var(--satoshi-font);
+  --text-sm-1: 500 14px/24px var(--satoshi-font);
+  --text-md: 500 15px/24px var(--satoshi-font);
+  --text-lg: 500 18px/24px var(--satoshi-font);
+  --text-xl: 500 24px/32px var(--satoshi-font);
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+.v-tabs.bg-primary {
+  background-color: var(--black) !important;
+  padding: 2px;
+  border-radius: 10px !important;
+  width: fit-content;
+}
+
+
+.v-tab {
+  font: var(--text-sm) !important;
+  color: var(--gray-100) !important;
+  text-transform: capitalize !important;
+}
+
+.v-tab.v-tab.v-btn {
+  height: 100% !important;
+  border: none !important;
+}
+
+.v-tab__slider {
+  display: none;
+}
+
+.v-tab--selected {
+  background-color: var(--bg-dark-100) !important;
+  border: none !important;
+  border-radius: 8px !important;
+  color: var(--vt-c-white) !important;
+  padding: 6px 12px;
 }
